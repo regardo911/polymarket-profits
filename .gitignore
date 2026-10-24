@@ -1,0 +1,17 @@
+# secrets
+.env
+
+# what the scripts write while you use them; a committed traded_markets.json
+# blocks every trade, and a committed calibration.json fakes the baselines
+trades.csv
+traded_markets.json
+traded_markets.*.json
+calibration.json
+whale_alerts.json
+bot_output.log
+alerts.log
+
+.venv/
+__pycache__/
+*.pyc
+.DS_Store

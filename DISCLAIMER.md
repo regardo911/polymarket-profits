@@ -1,0 +1,7 @@
+# Disclaimer
+
+**Not financial advice.** This repository is **educational software** that accompanies the book *Polymarket Profits: Build AI Trading Bots in a Weekend*. It is provided for learning and research only. None of it is financial advice or a recommendation to buy or sell any contract. Trading prediction markets carries substantial risk of losing all the money you put in. Any figures this code prints, from live prices or from the made-up test data, do **not** predict real results and are **not** indicative of any real outcome. The authors and contributors make **no warranty** of any kind and accept **no liability** for any loss arising from use of this software. **The software defaults to paper mode, where trades are only written down; enabling any live behavior is entirely at your own risk.** You are solely responsible for your own decisions and for complying with the laws, regulations, and third-party terms that apply to you. Consult a licensed professional before acting.
+
+The bots trade on paper: they write down trades and never send them. `chapters/05-first-bot/live/live_order.py` sends one real order only after you edit the code to switch it on, with your own account and credentials. Use the platform that is legal where you live, never a VPN or a false statement about where you live.
+
+This project is not affiliated with, endorsed by or connected to Polymarket, Polymarket US or Kalshi.

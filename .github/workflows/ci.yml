@@ -1,0 +1,30 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ["3.11", "3.12"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install (the two libraries the book uses, nothing else)
+        run: pip install -r requirements.txt
+      - name: Lint
+        run: |
+          pip install ruff
+          ruff check --select E4,E7,E9,F .
+      - name: Tests (offline; the suite blocks real network calls)
+        run: |
+          python -m unittest discover tests -v 2>&1 | tee test-output.txt
+          grep -Eq '^Ran [1-9][0-9]* tests?' test-output.txt
+          tail -1 test-output.txt | grep -q '^OK'

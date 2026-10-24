@@ -1,0 +1,7 @@
+{
+  "politics": {"yes": 14, "total": 31},
+  "crypto": {"yes": 8, "total": 24},
+  "sports": {"yes": 19, "total": 35},
+  "economics": {"yes": 5, "total": 18},
+  "general": {"yes": 11, "total": 22}
+}
